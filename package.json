@@ -1,0 +1,14 @@
+{
+  "name": "mfe-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "container": "cd container && yarn start",
+    "marketing": "cd marketing && yarn start",
+    "start": "concurrently \"yarn run container\" \"yarn run marketing\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0"
+  }
+}
