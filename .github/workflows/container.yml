@@ -2,11 +2,13 @@ name: CI/CD
 
 on:
   push:
-    branches: [master]
-    paths: -'container/**'
+    branches: [main]
+    paths:
+      - 'container/**'
   pull_request:
-    branches: [master]
-    paths: -'container/**'
+    branches: [main]
+    paths:
+      - 'container/**'
 
 defaults:
   run:
