@@ -7,5 +7,5 @@ export default () => {
     mount(ref.current);
   }, []);
 
-  return <div ref={ref} />;
+  return <div className='marketing' ref={ref} />;
 };
