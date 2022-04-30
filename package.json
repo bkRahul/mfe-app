@@ -6,7 +6,8 @@
   "scripts": {
     "container": "cd container && yarn start",
     "marketing": "cd marketing && yarn start",
-    "start": "concurrently \"yarn run container\" \"yarn run marketing\""
+    "auth": "cd auth && yarn start",
+    "start": "concurrently \"yarn run container\" \"yarn run marketing\" \"yarn run auth\""
   },
   "devDependencies": {
     "concurrently": "^7.1.0"
