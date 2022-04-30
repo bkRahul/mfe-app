@@ -1,4 +1,4 @@
-import { mount } from 'marketing/MarketingApp';
+import { mount } from 'auth/AuthApp';
 import React, { useEffect, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 
@@ -21,5 +21,5 @@ export default () => {
     history.listen(onParentNavigate);
   }, []);
 
-  return <div className='marketing' ref={ref} />;
+  return <div className='auth' ref={ref} />;
 };
