@@ -81,6 +81,15 @@ export default function Header({ isSignedIn, onSignOut }) {
           >
             App
           </Typography>
+          <Typography
+            variant='h6'
+            color='inherit'
+            noWrap
+            component={RouterLink}
+            to='/v2'
+          >
+            V2
+          </Typography>
           <Button
             color='primary'
             variant='outlined'
