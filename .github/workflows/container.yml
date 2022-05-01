@@ -52,9 +52,6 @@ jobs:
         env:
           PRODUCTION_DOMAIN: ${{ secrets.PRODUCTION_DOMAIN }}
 
-      - name: AWS cli
-        uses: shinyinc/action-aws-cli@v1.2
-
       - name: Deploy to AWS
         run: aws s3 sync dist s3://${{ secrets.AWS_S3_BUCKETNAME }}/container/latest
         env:
