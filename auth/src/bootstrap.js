@@ -4,7 +4,7 @@ import App from './App';
 import { createMemoryHistory, createBrowserHistory } from 'history';
 
 //mount function to get el ref to call render APP on startup
-const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
+const mount = (el, { onSignIn, onNavigate, defaultHistory, initialPath }) => {
   const history =
     defaultHistory || createMemoryHistory({ initialEntries: [initialPath] });
 
@@ -12,7 +12,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
     history.listen(onNavigate);
   }
 
-  ReactDom.render(<App history={history} />, el);
+  ReactDom.render(<App history={history} onSignIn={onSignIn} />, el);
 
   return {
     onParentNavigate({ pathname: nextPathName }) {
