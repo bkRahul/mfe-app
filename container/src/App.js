@@ -42,6 +42,9 @@ export default () => {
               {!isSignedIn && <Redirect to='/' />}
               <DashboardApp />
             </Route>
+            <Route path='/v2'>
+              <Redirect to='/v2/index.html' />
+            </Route>
             <Route path='/' component={MarketingApp} />
           </Switch>
         </Suspense>
